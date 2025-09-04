@@ -75,6 +75,15 @@
     <ClCompile Include="src\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lightingscene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\maths\qmath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qmathtest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\shaders\Triangle\Triangle.vert" />
@@ -83,12 +92,19 @@
     <None Include="resources\shaders\Textures\Texture.frag" />
     <None Include="resources\shaders\RotatingCube\RotatingCube.vert" />
     <None Include="resources\shaders\RotatingCube\RotatingCube.frag" />
+    <None Include="resources\shaders\Lighting\lightingcubeshader.frag" />
+    <None Include="resources\shaders\Lighting\lightsourceshader.frag" />
+    <None Include="resources\shaders\Lighting\lightsourceshader.vert" />
+    <None Include="resources\shaders\Lighting\lightingcubeshader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shaders\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\camera\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\qmath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

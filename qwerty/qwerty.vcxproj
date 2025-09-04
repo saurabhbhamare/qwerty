@@ -162,9 +162,16 @@
     <ClCompile Include="src\imgui\imgui_tables.cpp" />
     <ClCompile Include="src\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\maths\qmath.cpp" />
+    <ClCompile Include="src\qmathtest.cpp" />
     <ClCompile Include="src\shaders\Shader.cpp" />
+    <ClCompile Include="src\lightingscene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\shaders\Lighting\lightingcubeshader.frag" />
+    <None Include="resources\shaders\Lighting\lightingcubeshader.vert" />
+    <None Include="resources\shaders\Lighting\lightsourceshader.frag" />
+    <None Include="resources\shaders\Lighting\lightsourceshader.vert" />
     <None Include="resources\shaders\RotatingCube\RotatingCube.frag" />
     <None Include="resources\shaders\RotatingCube\RotatingCube.vert" />
     <None Include="resources\shaders\Textures\Texture.frag" />
@@ -174,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\camera\camera.h" />
+    <ClInclude Include="src\maths\qmath.h" />
     <ClInclude Include="src\shaders\Shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

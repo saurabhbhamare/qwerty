@@ -1,5 +1,5 @@
 #include</Programming/qwerty/qwerty/src/shaders/Shader.h>
-
+#include</Programming/qwerty/qwerty/src/maths/qmath.h>
 
 Shader::Shader(const char* vertexShaderSourcePath,const char* fragmentShaderSourcePath)
 {
@@ -105,7 +105,14 @@ void Shader::SetInt(const std::string& name, int value)
 void Shader::SetVec3(const std::string& name, glm::vec3& value)
 {
 	glUniform3fv(glGetUniformLocation(ID, name.c_str()),1, &value[0]);
+	
 }
+void Shader::SetVec3(const std::string& name,  qmath::vec3& value)
+{
+	glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1,&value.values[0]);
+}
+
+
 void Shader::SetMat4(const std::string& name, glm::mat4  &value)  
 {
 	glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &value[0][0]);
