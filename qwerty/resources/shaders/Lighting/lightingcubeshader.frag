@@ -1,46 +1,30 @@
 #version 330 core
 out vec4 FragColor;
-uniform vec3 viewPos;
-uniform vec3 lightSourceColor;
-uniform vec3 cubeColor;
-uniform vec3 lightPos;
+float ambientStrength= 0.1f; 
+//float diffuse; 
+uniform vec3 lightSourcePosition; 
+vec3 lightDir;
 in vec3 Normal;
-in vec3 FragPos;
+in vec3 FragPos; 
+uniform vec3 viewerPosition;
 void main()
 {
+	//ambient lighting 
+	ambientStrength  = 0.1f; 
 
-	//ambient light 
-	float ambientStrength = 0.085f; 
-	vec3 ambient = ambientStrength* lightSourceColor;
-
-
-	//diffuse light 
-
-	vec3 norm = normalize(Normal);
-	vec3 lightDir = normalize(lightPos - FragPos);
-
-	float diff = max(dot(norm,lightDir),0.0f);
-	vec3 diffuse  = diff* lightSourceColor;
-
+	//diffuse lighting 
 	
+	vec3 norm = normalize(Normal);
+	lightDir = normalize((lightSourcePosition - FragPos));
+	float diffuse = max(dot(norm,lightDir),0.0f);	
 
-	//FragColor = vec4(lightSourceColor*cubeColor*0.2f,1.0f);
-	//FragColor = vec4(lightSourceColor*cubeColor*ambientStrength,1.0f);
-
-	vec3 normalTest = normalize(Normal);
-    //FragColor = vec4(norm * 0.5 + 0.5, 1.0); // visualize normals
-
-
-	//specular light
-	float specularStrength = 1.5f; 
-	vec3 viewDir = normalize(viewPos-FragPos);
-	vec3 reflectDir = reflect(-lightDir,norm);
-
-	float spec = pow(max(dot(viewDir,reflectDir),0.0),32);
-	vec3 specular = specularStrength*spec*lightSourceColor;
-
-
-
-	vec3 result = (ambient+diffuse+specular)*cubeColor;
-	FragColor = vec4(result,1.0f);
+	//specular lighting
+	vec3 viewDir = normalize(viewerPosition - FragPos);
+	vec3 reflectDir = reflect(-lightDir, norm);
+	float specularStrength = 2.5f;
+	float spec = pow(max(dot(viewDir,reflectDir),0.0f),32);
+	
+	// final fragcolor 
+	//FragColor = vec4(1.0f,0.0f,0.0f,1.0f)*(ambientStrength + diffuse + specularStrength);
+	FragColor = vec4(1.0f,0.0f,0.0f,1.0f)*(ambientStrength + diffuse + spec*specularStrength);
 }

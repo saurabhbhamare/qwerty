@@ -1,7 +1,3 @@
-//
-//
-//
-//
 //#include<imgui.h>
 //#include<imgui_impl_glfw.h>
 //#include<imgui_impl_opengl3.h>
@@ -16,8 +12,6 @@
 //#include</Programming/qwerty/qwerty/src/maths/qmath.h>
 //
 //
-//
-//
 ////qwerty math test
 ////qmath::vec3 objectPosition();
 //
@@ -27,7 +21,7 @@
 ////lightsource cube position 
 //
 //
-//glm::vec3 lightCubePosition = glm::vec3(0.0f, 0.0f, 3.0f); 
+//glm::vec3 lightCubePosition = glm::vec3(0.0f, 0.0f, 3.0f);
 //
 ////qmath::vec3 lightCubePosition(0.0f, 0.0f, 3.0f);
 //
@@ -72,8 +66,8 @@
 //
 //
 ////lightsourcecolor and normalcubve colors
-//glm::vec3 lightSourceColor(1.0f, 1.0f, 1.0f);
-//glm::vec3 normalCubeColor(0.5f, 0.4f, 0.0f);
+//glm::vec3 lightSourceColor(0.0f, 0.0f, 1.0f);
+//glm::vec3 normalCubeColor(0.0f, 1.0f, 1.0f);
 //
 //
 ////float vertices[] = {
@@ -170,18 +164,37 @@
 //
 //
 //
-//glm::vec3 cubePositions[] = {
-//	glm::vec3(0.0f,  0.0f,  0.0f),
-//	glm::vec3(2.0f,  5.0f, -15.0f),
-//	glm::vec3(-1.5f, -2.2f, -2.5f),
-//	glm::vec3(-3.8f, -2.0f, -12.3f),
-//	glm::vec3(2.4f, -0.4f, -3.5f),
-//	glm::vec3(-1.7f,  3.0f, -7.5f),
-//	glm::vec3(1.3f, -2.0f, -2.5f),
-//	glm::vec3(1.5f,  2.0f, -2.5f),
-//	glm::vec3(1.5f,  0.2f, -1.5f),
-//	glm::vec3(-1.3f,  1.0f, -1.5f)
-//};
+//glm::vec3 cubePositions[100] = {
+//	glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(2.0f, 5.0f, -15.0f), glm::vec3(-1.5f, -2.2f, -2.5f),
+//	glm::vec3(-3.8f, -2.0f, -12.3f), glm::vec3(2.4f, -0.4f, -3.5f), glm::vec3(-1.7f, 3.0f, -7.5f),
+//	glm::vec3(1.3f, -2.0f, -2.5f), glm::vec3(1.5f, 2.0f, -2.5f), glm::vec3(1.5f, 0.2f, -1.5f),
+//	glm::vec3(-1.3f, 1.0f, -1.5f), glm::vec3(3.0f, 3.0f, -10.0f), glm::vec3(-2.0f, 4.0f, -5.0f),
+//	glm::vec3(0.5f, -1.0f, -3.0f), glm::vec3(-4.0f, 2.0f, -8.0f), glm::vec3(2.0f, -3.0f, -6.0f),
+//	glm::vec3(1.0f, 1.0f, -1.0f), glm::vec3(-2.5f, -1.5f, -4.5f), glm::vec3(3.5f, 2.5f, -9.5f),
+//	glm::vec3(-3.0f, 0.0f, -7.0f), glm::vec3(0.0f, 3.0f, -2.0f), glm::vec3(2.2f, -2.2f, -5.5f),
+//	glm::vec3(-1.1f, 1.1f, -3.3f), glm::vec3(4.0f, -1.0f, -6.0f), glm::vec3(-2.0f, 2.0f, -4.0f),
+//	glm::vec3(1.8f, 0.5f, -2.2f), glm::vec3(-3.3f, -3.3f, -3.3f), glm::vec3(0.7f, 2.7f, -1.7f),
+//	glm::vec3(2.5f, -0.5f, -2.5f), glm::vec3(-1.9f, 1.9f, -1.9f), glm::vec3(3.3f, -2.3f, -5.3f),
+//	glm::vec3(-4.4f, 0.4f, -6.4f), glm::vec3(1.1f, -1.1f, -1.1f), glm::vec3(2.9f, 3.9f, -7.9f),
+//	glm::vec3(-0.8f, -0.8f, -0.8f), glm::vec3(3.8f, -3.8f, -3.8f), glm::vec3(-2.7f, 2.7f, -2.7f),
+//	glm::vec3(0.3f, 0.3f, -0.3f), glm::vec3(4.5f, -4.5f, -4.5f), glm::vec3(-1.6f, 1.6f, -1.6f),
+//	glm::vec3(2.6f, -2.6f, -2.6f), glm::vec3(-3.6f, 3.6f, -3.6f), glm::vec3(0.6f, -0.6f, -0.6f),
+//	glm::vec3(1.9f, 1.9f, -1.9f), glm::vec3(-2.9f, -2.9f, -2.9f), glm::vec3(3.1f, 3.1f, -3.1f),
+//	glm::vec3(-4.1f, -4.1f, -4.1f), glm::vec3(0.9f, 0.9f, -0.9f), glm::vec3(2.3f, -2.3f, -2.3f),
+//	glm::vec3(-3.3f, 3.3f, -3.3f), glm::vec3(1.7f, -1.7f, -1.7f), glm::vec3(-2.1f, 2.1f, -2.1f),
+//	glm::vec3(3.6f, -3.6f, -3.6f), glm::vec3(-4.6f, 4.6f, -4.6f), glm::vec3(0.2f, -0.2f, -0.2f),
+//	glm::vec3(1.5f, 1.5f, -1.5f), glm::vec3(-2.5f, -2.5f, -2.5f), glm::vec3(3.0f, 3.0f, -3.0f),
+//	glm::vec3(-4.0f, -4.0f, -4.0f), glm::vec3(0.0f, 0.0f, -0.0f), glm::vec3(2.0f, -2.0f, -2.0f),
+//	glm::vec3(-3.0f, 3.0f, -3.0f), glm::vec3(1.0f, -1.0f, -1.0f), glm::vec3(-2.0f, 2.0f, -2.0f),
+//	glm::vec3(3.5f, -3.5f, -3.5f), glm::vec3(-4.5f, 4.5f, -4.5f), glm::vec3(0.5f, -0.5f, -0.5f),
+//	glm::vec3(1.2f, 1.2f, -1.2f), glm::vec3(-2.2f, -2.2f, -2.2f), glm::vec3(3.2f, 3.2f, -3.2f),
+//	glm::vec3(-4.2f, -4.2f, -4.2f), glm::vec3(0.2f, 0.2f, -0.2f), glm::vec3(2.8f, -2.8f, -2.8f),
+//	glm::vec3(-3.8f, 3.8f, -3.8f), glm::vec3(1.8f, -1.8f, -1.8f), glm::vec3(-2.8f, 2.8f, -2.8f),
+//	glm::vec3(3.9f, -3.9f, -3.9f), glm::vec3(-4.9f, 4.9f, -4.9f), glm::vec3(0.9f, -0.9f, -0.9f),
+//	glm::vec3(1.6f, 1.6f, -1.6f), glm::vec3(-2.6f, -2.6f, -2.6f), glm::vec3(3.6f, 3.6f, -3.6f),
+//	glm::vec3(-4.6f, -4.6f, -4.6f), glm::vec3(0.6f, 0.6f, -0.6f), glm::vec3(2.1f, -2.1f, -2.1f),
+//	glm::vec3(-3.1f, 3.1f, -3.1f), glm::vec3(1.1f, -1.1f, -1.1f), glm::vec3(-2.1f, 2.1f, -2.1f),
+//	glm::vec3(3.4f, -3.4f, -3.4f), glm::vec3(-4.4f, 4.4f, -4.4f) };
 //
 //const char* vertexShaderSource =
 //"#version 330 core\n"
@@ -228,7 +241,7 @@
 //	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 //	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 //
-//	GLFWwindow* window = glfwCreateWindow(1280, 800, "window", NULL, NULL);
+//	GLFWwindow* window = glfwCreateWindow(1920, 1080, "window", NULL, NULL);
 //	glfwMakeContextCurrent(window);
 //	glfwSetCursorPosCallback(window, mouse_callback);
 //	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
@@ -261,14 +274,21 @@
 //	/*io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;*/
 //
 //
-//	ImGui::StyleColorsDark();
+//	//ImGui::StyleColorsDark();
+//	ImVec4* colors = ImGui::GetStyle().Colors;
+//
+//	// Example: Set window background to a soft dark gray
+//	colors[ImGuiCol_WindowBg] = ImVec4(0.05f, 0.05f, 0.05f, 1.0f);
+//
+//	// Example: Set button color to a warm orange
+//	colors[ImGuiCol_Button] = ImVec4(0.85f, 0.45f, 0.1f, 1.0f);
+//	colors[ImGuiCol_ButtonHovered] = ImVec4(0.95f, 0.55f, 0.2f, 1.0f);
+//	colors[ImGuiCol_ButtonActive] = ImVec4(0.75f, 0.35f, 0.05f, 1.0f);
+//
+//	//ImGui::StyleColorsClassic();
+//	//ImGui::StyleColorsLight();
 //	ImGui_ImplGlfw_InitForOpenGL(window, true);
 //	ImGui_ImplOpenGL3_Init("#version 330 core");
-//
-//
-//
-//
-//
 //
 //	unsigned int VBO;
 //	unsigned int VAO;
@@ -280,44 +300,18 @@
 //
 //	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 //
-//	/*glEnableVertexAttribArray(0);
-//	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-//
-//	glEnableVertexAttribArray(1);
-//	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));*/
-//
-//
-//	/*glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-//	glEnableVertexAttribArray(0);*/
-//
 //	glEnableVertexAttribArray(0);
 //	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 //
 //	glEnableVertexAttribArray(1);
 //	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-//	
-//
-//	//Implement Colors
-//
-//	/*unsigned int lightVAO; 
-//	glGenVertexArrays(1, &VAO);
-//	glBindVertexArray(VAO);*/ 
-//
-//
-//	//shaders
-//
-//	//Shader shader("C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.frag");
 //
 //	//shaders for lighting
 //	Shader lightingCubeShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.frag");
 //	Shader lightSourceShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.frag");
 //
 //	//matrices
-//	//imgui data first
-//
-//	
-//
-//
+//	//imgui data 
 //
 //	//lighting cube imgui data
 //
@@ -341,7 +335,7 @@
 //	glm::mat4 view = glm::mat4(1.0f);
 //	glm::mat4 projection = glm::mat4(1.0f);
 //
-//	projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 50.0f);
+//	projection = glm::perspective(glm::radians(45.0f), 1920.0f / 1080.0f, 0.1f, 50.0f);
 //
 //	view = glm::translate(view, glm::vec3(0.0f, 0.0f, -4.0f));
 //
@@ -358,27 +352,9 @@
 //
 //	glBindVertexArray(VAO);
 //
-//	//camera implementation
-//
-//	//glm::vec3 cameraPosition = glm::vec3(0.0f, 0.0f, -3.0f); 
-//	//glm::vec3 cameraTarget = glm::vec3(0.0f, 0.0f, 0.0f);
-//	//glm::vec3 cameraDirection = glm::normalize(cameraTarget - cameraPosition);
-//
-//
-//	//glm::vec3 upVector = glm::vec3(0.0f, 1.0f, 0.0f);
-//	//glm::vec3 cameraRight = glm::normalize(glm::cross(upVector, cameraDirection));
-//
-//	////calculate camera up vector
-//
-//	//glm::vec3 cameraUp = glm::normalize(glm::cross(cameraDirection, cameraRight));
-//
-//
-//
-//
-//
 //	while (!glfwWindowShouldClose(window))
 //	{
-//		glClearColor(0.02f, 0.0f, 0.0f,1.0f);
+//		glClearColor(0.02f, 0.0f, 0.0f, 1.0f);
 //
 //		float currentFrame = static_cast<float>(glfwGetTime());
 //		deltaTime = currentFrame - lastFrame;
@@ -408,10 +384,6 @@
 //
 //		ImGui::Render();
 //		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-//
-//
-//
-//
 //		glfwSwapBuffers(window);
 //
 //
@@ -424,70 +396,66 @@
 //
 //		view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 //
+//
 //		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 //
 //
 //		glm::mat4 model = glm::mat4(1.0f);
 //		glm::mat4 model2 = glm::mat4(1.0f);
-//		//glm::translate(model, translateValue);
+//
 //		glm::scale(model, modelTranslation);
-//		//glm::mat4 model2 = glm::mat4(1.0f);
+//
 //		modelScale = glm::vec3(scaleValue, scaleValue, scaleValue);
 //		modelTranslation = glm::vec3(0.0f, 0.0f, translateValue);
 //		lightSourceTranslation = glm::vec3(0.0f, verticalTranslateValue, horizontalTranslateValue);
-//		//lightSourceTranslation = glm::vec3(0.0f, 0.0f, );
+//
 //		model2 = glm::translate(model2, lightSourceTranslation);
 //		model = glm::translate(model, modelTranslation);
 //		model = glm::rotate(model, modelRotationAngle, glm::vec3(0.0f, 1.0f, 0.0f));
 //		model = glm::scale(model, modelScale);
-//		//model = glm::translate(model, t);
 //
 //
 //		glBindVertexArray(VAO);
-//
-//		//simple triangle shader
-//		//shader.Use();
-//
-//
-//		//shader.SetMat4("model", model);
-//		//shader.SetMat4("view", view);
-//		//shader.SetMat4("projection", projection);
+//		lightCubePosition = glm::vec3(model2 * glm::vec4(0.0f, 0.0f, 0.0f, 1.0f));
+//		for (int i = 0; i < 80; i++)
+//		{
+//			lightingCubeShader.Use();
+//			lightingCubeShader.SetVec3("lightSourceColor", lightSourceColor);
+//			lightingCubeShader.SetVec3("cubeColor", normalCubeColor);
 //
 //
+//			model = glm::translate(model, cubePositions[i]);
+//			lightingCubeShader.SetVec3("lightPos", lightCubePosition);
+//			lightingCubeShader.SetVec3("viewPos", cameraPos);
+//
+//			lightingCubeShader.SetMat4("model", model);
+//			lightingCubeShader.SetMat4("view", view);
+//			lightingCubeShader.SetMat4("projection", projection);
+//
+//			glDrawArrays(GL_TRIANGLES, 0, 36);
+//		}
 //
 //
-//		//cube after light source effect 
-//
-//		lightingCubeShader.Use();
-//		lightingCubeShader.SetVec3("lightSourceColor", lightSourceColor);
-//		lightingCubeShader.SetVec3("cubeColor", normalCubeColor);
-//		lightingCubeShader.SetVec3("lightPos", lightCubePosition);
-//		lightingCubeShader.SetVec3("viewPos", cameraPos);
-//
-//		lightingCubeShader.SetMat4("model", model);
-//		lightingCubeShader.SetMat4("view", view);
-//		lightingCubeShader.SetMat4("projection", projection);
-//
-//		/*lightSourceShader.SetMat4("model", model);
-//		lightSourceShader.SetMat4("view", view);
-//		lightSourceShader.SetMat4("projection", projection);*/
-//
-//
-//		glDrawArrays(GL_TRIANGLES, 0, 36);
 //
 //
 //		//render light source 
-//		
+//		//lightCubePosition.x = 1.0f + sin(glfwGetTime()) * 5.0f;
+//		lightCubePosition.y = sin(glfwGetTime() / 2.0f) * 10.0f;
+//
 //		model2 = glm::translate(model2, lightCubePosition);
-//		//model2 = qmath::Translate()  //qmath impl
-//		
+//
+//		//model2 = glm::rotate(model2, 1.0f, glm::vec3(0.0f,1.0f,1.0f));
+//
 //		lightSourceShader.Use();
 //		lightSourceShader.SetMat4("model", model2);
 //		lightSourceShader.SetMat4("view", view);
 //		lightSourceShader.SetMat4("projection", projection);
 //		lightSourceShader.SetVec3("lightSourcePosition", lightCubePosition);
+//
 //		//lightSourceShader.SetVec3("")
 //		glDrawArrays(GL_TRIANGLES, 0, 36);
+//		glDrawArrays(GL_TRIANGLES, 0, 36);
+//
 //
 //	}
 //	//close imgui 
@@ -535,43 +503,5 @@
 //		front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
 //		cameraFront = glm::normalize(front);
 //	}
+//	
 //}
-//class Player
-//{
-//	int x;
-//};
-//class Entity
-//{
-//	int x;
-//};
-//
-//
-//
-//
-////void MouseCallback(GLFWwindow* window, double  xPosIn, double yPosIn)
-////{
-////	 
-////	float xPos = static_cast<float>(xPosIn);
-////	float yPos = static_cast<float>(yPosIn);
-////
-////
-////
-////}
-////void MouseCallback(GLFWwindow* window)
-////{
-////
-////}
-////void MouseCallback(GLFWwindow* window, double  xPosIn, double yPosIn)
-////{
-////
-////	//std::cout << xPosIn << std::endl;
-////	//std::cout << yPosIn << std::endl;
-////
-////
-////	float x = 2.9345;
-////	std::cout << x << std::endl;
-////
-////
-////
-////
-////}

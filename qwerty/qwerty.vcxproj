@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Programming\qwerty\qwerty\libraries\imgui;C:\Programming\qwerty\qwerty\libraries\glfw\include;C:\Programming\qwerty\qwerty\\libraries;C:\Programming\qwerty\qwerty\\libraries\glad\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Programming\qwerty\qwerty\libraries\stbimage;C:\Programming\qwerty\qwerty\libraries\imgui;C:\Programming\qwerty\qwerty\libraries\glfw\include;C:\Programming\qwerty\qwerty\\libraries;C:\Programming\qwerty\qwerty\\libraries\glad\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Programming\qwerty\qwerty\\libraries\glfw\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -152,6 +152,7 @@
     <ClCompile Include="libraries\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="libraries\imgui\imgui_tables.cpp" />
     <ClCompile Include="libraries\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="libraries\stbimage\stbimage.cpp" />
     <ClCompile Include="src\camera\camera.cpp" />
     <ClCompile Include="src\imgui\imgui.cpp" />
     <ClCompile Include="src\imgui\imgui_demo.cpp" />
@@ -161,11 +162,17 @@
     <ClCompile Include="src\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\imgui\imgui_tables.cpp" />
     <ClCompile Include="src\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\fakemain.cpp" />
+    <ClCompile Include="src\lightingscene2.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\maths\qmath.cpp" />
+    <ClCompile Include="src\modeloading.cpp" />
     <ClCompile Include="src\qmathtest.cpp" />
+    <ClCompile Include="src\qwerty\qwerty.cpp" />
+    <ClCompile Include="src\rendercat.cpp" />
     <ClCompile Include="src\shaders\Shader.cpp" />
-    <ClCompile Include="src\lightingscene.cpp" />
+    <ClCompile Include="src\lightingscene1.cpp" />
+    <ClCompile Include="src\window\qwindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\shaders\Lighting\lightingcubeshader.frag" />
@@ -180,9 +187,12 @@
     <None Include="resources\shaders\Triangle\Triangle.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="libraries\stbimage\stb_image.h" />
     <ClInclude Include="src\camera\camera.h" />
     <ClInclude Include="src\maths\qmath.h" />
+    <ClInclude Include="src\qwerty\qwerty.h" />
     <ClInclude Include="src\shaders\Shader.h" />
+    <ClInclude Include="src\window\qwindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

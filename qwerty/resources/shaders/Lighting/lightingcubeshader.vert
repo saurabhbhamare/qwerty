@@ -4,23 +4,19 @@ layout(location = 0 ) in vec3 aPos;
 layout(location = 1) in vec3 aNormal;
 
 out vec3 FragPos; 
+
 out vec3 Normal;
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
+uniform vec3 lightingCubePosition; 
+float scaleValue; 
+
 void main()
 {
-
-
-	//updating the normals	
-	vec4 worldPos = model* vec4(aPos,1.0f);
-	FragPos = vec3(worldPos);
-
-	Normal = mat3(transpose(inverse(model)))* aNormal;
-
-	//gl_Position = projection * view * model * vec4(aPos,1.0f);
-	gl_Position = projection * view * model * worldPos;
+	FragPos = vec3(model * vec4(aPos, 1.0));
+	//FragPos = vec3(aPos);
 	//Normal = aNormal; 
-	//FragPos = vec3(model*vec4(aPos,1.0f));	
-
+	Normal = mat3(transpose(inverse(model))) * aNormal; 
+	gl_Position = projection * view *model*vec4(aPos, 1.0f);
 }
