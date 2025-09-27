@@ -164,6 +164,7 @@
     <ClCompile Include="src\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\fakemain.cpp" />
     <ClCompile Include="src\lightingscene2.cpp" />
+    <ClCompile Include="src\lightingscene3.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\maths\qmath.cpp" />
     <ClCompile Include="src\modeloading.cpp" />

@@ -105,6 +105,9 @@
     <ClCompile Include="src\rendercat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lightingscene3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\shaders\Triangle\Triangle.vert" />

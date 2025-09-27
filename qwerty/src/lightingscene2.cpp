@@ -17,47 +17,48 @@
 //color data
 
 float vertices[] = {
-	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-	 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-	 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-	 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-	-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+	// positions          // normals           // texture coords
+	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  0.0f,
+	 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  0.0f,
+	 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  1.0f,
+	 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  1.0f,
+	-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  1.0f,
+	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  0.0f,
 
-	-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-	 0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-	 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-	 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-	-0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-	-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+	-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  0.0f,
+	 0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  0.0f,
+	 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  1.0f,
+	 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  1.0f,
+	-0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  1.0f,
+	-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  0.0f,
 
-	-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
-	-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
-	-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
-	-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
-	-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
-	-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+	-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+	-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  1.0f,
+	-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+	-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+	-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  0.0f,
+	-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
 
-	 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
-	 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
-	 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
-	 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
-	 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
-	 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+	 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+	 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  1.0f,
+	 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+	 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+	 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  0.0f,
+	 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
 
-	-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
-	 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
-	 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
-	 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
-	-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
-	-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+	-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  1.0f,
+	 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  1.0f,
+	 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  0.0f,
+	 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  0.0f,
+	-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  0.0f,
+	-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  1.0f,
 
-	-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
-	 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
-	 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
-	 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
-	-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
-	-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
+	-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f,
+	 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  1.0f,
+	 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  0.0f,
+	 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  0.0f,
+	-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  0.0f,
+	-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f
 };
 
 //camera properties
@@ -75,6 +76,8 @@ float lastX = 800.0f / 2.0;
 float lastY = 600.0 / 2.0;
 float fov = 45.0f;
 
+
+unsigned int LoadTexture(const char* path);
 void KeyboardInputHandling(GLFWwindow* window);
 void mouse_callback(GLFWwindow* window, double xposIn, double yposIn);
 
@@ -132,37 +135,56 @@ int main()
 	glBindVertexArray(VAO);
 
 	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6* sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8* sizeof(float), (void*)0);
 	//glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 
 	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3*sizeof(float)));
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3*sizeof(float)));
+
+	glEnableVertexAttribArray(2);
+	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+
 	
 
 	//textures
-	int width, height, nrChannels;
+	//int width, height, nrChannels;
 	//unsigned char* data = stbi_load("C:/Programming/qwerty/qwerty/resources/textures/video starting door only.png", &width, &height, &nrChannels, 0);
-	unsigned char* data = stbi_load("C:/Programming/qwerty/qwerty/resources/textures/preview.bmp", &width, &height, &nrChannels, 0);
+	//unsigned char* data = stbi_load("C:/Programming/qwerty/qwerty/resources/textures/preview.bmp", &width, &height, &nrChannels, 0);
+
+
 
 
 	//glBindTexture(GL_TEXTURE_2D, texture);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-	glGenerateMipmap(GL_TEXTURE_2D);
+	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+	//glGenerateMipmap(GL_TEXTURE_2D);
 
-	unsigned int texture; 
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
-	
+	//unsigned int texture; 
+	//glGenTextures(1, &texture);
+	//glBindTexture(GL_TEXTURE_2D, texture);
+	//
 	
 	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
 	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+
+
+
+	//new textures ================================
+
+	unsigned int diffuseMap = LoadTexture("C:/Programming/qwerty/qwerty/resources/textures/container2.png");
+	unsigned int specularMap = LoadTexture("C:/Programming/qwerty/qwerty/resources/textures/container2_specular.png");
+
 
 	//shaders
 	//Shader triangleShader("C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.frag");
@@ -187,10 +209,18 @@ int main()
 		deltatime = currentTime - lastFrametime; 
 		lastFrametime = currentTime;	
 
-		//change light position 
+		
+
+		//change light position  and color
+		
 		lightSourcePosition.x = 1.0f + sin(glfwGetTime()) * 4.0f;
 		lightSourcePosition.y = sin(glfwGetTime() / 2.0f) * 4.0f;
 		lightSourcePosition.z = sin(glfwGetTime() / 2.0f) * 4.0f;
+
+		lightColor.x = sin(glfwGetTime() * 2.0f);
+		lightColor.y = sin(glfwGetTime() * 0.7f);
+		lightColor.z = sin(glfwGetTime() * 1.0f);
+
 		//keyboard input handling 
 		KeyboardInputHandling(window);
 		glfwPollEvents();
@@ -199,20 +229,53 @@ int main()
 		view = glm::lookAt(cameraPos, cameraPos + cameraFront, up);
 
 		//triangle shader 
-		glBindTexture(GL_TEXTURE_2D, texture);
+		//glBindTexture(GL_TEXTURE_2D, texture);
 		//render cube shader
 
 		lightSourceShader.Use();
 
+		
+		
 		lightSourceShader.SetMat4("view", view);
 		lightSourceShader.SetMat4("projection", projection);
 		lightSourceShader.SetMat4("model", model);
 		lightSourceShader.SetVec3("lightSourcePosition", lightSourcePosition);
+
+
+		
 		//lightSourceShader.Use();
 
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		lightingCubeShader.Use(); 
+
+	 	lightingCubeShader.SetVec3("lightColor", lightColor);
+		lightingCubeShader.SetVec3("light.position", lightSourcePosition);
+		lightingCubeShader.SetVec3("light.ambient", glm::vec3(0.2f, 0.2f, 0.2f));
+		lightingCubeShader.SetVec3("light.diffuse", glm::vec3(0.3f, 0.3f, 0.3f));
+		lightingCubeShader.SetVec3("light.specular", glm::vec3(1.0f, 1.0f, 1.0f));
+		
+
+		//lightingCubeShader.SetVec3("material.ambient", glm::vec3(0.1f, 0.1f, 0.1f));
+		//lightingCubeShader.SetVec3("material.diffuse", glm::vec3(1.0f,0.5f,0.31f));
+		lightingCubeShader.SetVec3("material.specular", glm::vec3(0.5f, 0.5f, 0.5f));
+		lightingCubeShader.SetFloat("material.shininess", 65.0f);
+
+
+		lightingCubeShader.SetInt("material.diffuse", 0);
+		lightingCubeShader.SetInt("material.specular", 1);
+
+		//set textures
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, diffuseMap);
+
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, specularMap);
+		
+
+			
+
+
 		lightingCubeShader.SetMat4("view", view);
 		lightingCubeShader.SetMat4("projection", projection);
 		lightingCubeShader.SetMat4("model", model);
@@ -231,27 +294,26 @@ int main()
 void KeyboardInputHandling(GLFWwindow* window)
 {
 	float speed = 0.01f;
+	glm::vec3 cameraRight = glm::normalize(glm::cross(cameraFront, up));
 	if (glfwGetKey(window, GLFW_KEY_W))
 	{
 		//std::cout << "w key pressed" << std::endl;
-		cameraPos -= glm::vec3(0.0f, 0.0f, 1.0f)*speed;
+		cameraPos += cameraFront *speed;
 		//view = glm::translate()
 		
 	}
 	if (glfwGetKey(window, GLFW_KEY_A))
 	{
 		//cameraPos -= glm::cross(cameraTarget, up)*speed;
-		cameraPos -= glm::vec3(1.0f, 0.0f, 0.0f) * speed;
+		cameraPos -= cameraRight* speed;
 	}
 	if (glfwGetKey(window, GLFW_KEY_S))
 	{
-		cameraPos += glm::vec3(0.0f, 0.0f, 1.0f)*speed;
+		cameraPos -= cameraFront*speed;
 	}
 	if (glfwGetKey(window, GLFW_KEY_D))
 	{
-		//cameraPos += glm::cross(cameraTarget, up) * speed;
-		//cameraPos += glm::vec3(1.0f, 0.0f, 0.0f) * speed;
-		cameraPos.x += 1.0f * speed;
+		cameraPos += cameraRight * speed;
 	}
 	if (glfwGetKey(window, GLFW_KEY_E))
 	{
@@ -300,5 +362,48 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 	cameraFront = glm::normalize(front);
 }
 
+unsigned int LoadTexture(char const* path)
+{
+	unsigned int textureID; 
+	glGenTextures(1, &textureID);
+
+	int width, height, nrComponents; 
+	unsigned char* data = stbi_load(path, &width, &height, &nrComponents, 0);
+
+	if (data)
+	{
+		GLenum format; 
+		if (nrComponents == 1)
+		{
+			format = GL_RED; 
+		}
+		else if (nrComponents == 3)
+		{
+			format = GL_RGB;
+		}
+		else if (nrComponents == 4)
+		{
+			format = GL_RGBA;
+		}
+
+		glBindTexture(GL_TEXTURE_2D, textureID);
+		glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+		stbi_image_free(data);
+
+	}
+	else
+	{
+		std::cout << "texture failed to load at path :" << path << std::endl;
+		stbi_image_free(data);
+	}
+	return textureID;
+}
 
 
