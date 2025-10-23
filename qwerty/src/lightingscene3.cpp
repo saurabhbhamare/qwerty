@@ -13,6 +13,20 @@
 //#include</Programming/qwerty/qwerty/libraries/stbimage/stb_image.h>
 //#include<fstream>
 //
+//
+//
+//class LightingShader
+//{
+//public: 
+//	unsigned int shaderID; 
+//
+//public: 
+//	void CompileShader()
+//	{
+//		glCompileShader(shaderID);
+//	}
+//};
+//
 //enum  ShaderType
 //{
 //	VERTEX,

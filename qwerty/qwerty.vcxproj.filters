@@ -108,6 +108,24 @@
     <ClCompile Include="src\lightingscene3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lightingscene4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lightningstrikescene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fakepong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lightingscene5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\eyemovementscene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\shaders\Triangle\Triangle.vert" />
@@ -120,6 +138,12 @@
     <None Include="resources\shaders\Lighting\lightsourceshader.frag" />
     <None Include="resources\shaders\Lighting\lightsourceshader.vert" />
     <None Include="resources\shaders\Lighting\lightingcubeshader.vert" />
+    <None Include="resources\shaders\LightningStrike\lightningstrikefloor.vert" />
+    <None Include="resources\shaders\LightningStrike\lightningstrikefloor.frag" />
+    <None Include="resources\shaders\LightningStrike\lightning.vert" />
+    <None Include="resources\shaders\LightningStrike\lightning.frag" />
+    <None Include="resources\shaders\LightningStrike\lightning.geom" />
+    <None Include="resources\shaders\LightningStrike\testlightninggeometryshader.geom" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shaders\Shader.h">

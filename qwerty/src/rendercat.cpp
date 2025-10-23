@@ -225,10 +225,10 @@
 //
 //
 //	//shaders
-//	Shader triangleShader("C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.frag");
+//	Shader triangleShader("C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Triangle/Triangle.frag",NULL);
 //
-//	Shader lightingCubeShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.frag");
-//	Shader lightSourceShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.frag");
+//	Shader lightingCubeShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.frag",NULL);
+//	Shader lightSourceShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.frag",NULL);
 //
 //
 //	float time;
@@ -283,11 +283,11 @@
 //		//
 //		//triangle shader 
 //		glBindTexture(GL_TEXTURE_2D, texture);
-//		triangleShader.Use();
-//		triangleShader.SetMat4("model", model);
-//		triangleShader.SetMat4("view", view);
-//		triangleShader.SetMat4("projection", projection);
-//		triangleShader.SetInt("texture1", texture);
+//		triangleShader.Invoke();
+//		triangleShader.SetMat4Uniform("model", model);
+//		triangleShader.SetMat4Uniform("view", view);
+//		triangleShader.SetMat4Uniform("projection", projection);
+//		triangleShader.SetIntUniform("texture1", texture);
 //		/*lightSourceShader.Use();
 //
 //		lightSourceShader.SetMat4("view", view);

@@ -307,8 +307,8 @@
 //	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 //
 //	//shaders for lighting
-//	Shader lightingCubeShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.frag");
-//	Shader lightSourceShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.frag");
+//	Shader lightingCubeShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightingcubeshader.frag",nullptr);
+//	Shader lightSourceShader("C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.vert", "C:/Programming/qwerty/qwerty/resources/shaders/Lighting/lightsourceshader.frag",nullptr);
 //
 //	//matrices
 //	//imgui data 
@@ -419,18 +419,18 @@
 //		lightCubePosition = glm::vec3(model2 * glm::vec4(0.0f, 0.0f, 0.0f, 1.0f));
 //		for (int i = 0; i < 80; i++)
 //		{
-//			lightingCubeShader.Use();
-//			lightingCubeShader.SetVec3("lightSourceColor", lightSourceColor);
-//			lightingCubeShader.SetVec3("cubeColor", normalCubeColor);
+//			lightingCubeShader.Invoke();
+//			lightingCubeShader.SetVec3Uniform("lightSourceColor", lightSourceColor);
+//			lightingCubeShader.SetVec3Uniform("cubeColor", normalCubeColor);
 //
 //
 //			model = glm::translate(model, cubePositions[i]);
-//			lightingCubeShader.SetVec3("lightPos", lightCubePosition);
-//			lightingCubeShader.SetVec3("viewPos", cameraPos);
+//			lightingCubeShader.SetVec3Uniform("lightPos", lightCubePosition);
+//			lightingCubeShader.SetVec3Uniform("viewPos", cameraPos);
 //
-//			lightingCubeShader.SetMat4("model", model);
-//			lightingCubeShader.SetMat4("view", view);
-//			lightingCubeShader.SetMat4("projection", projection);
+//			lightingCubeShader.SetMat4Uniform("model", model);
+//			lightingCubeShader.SetMat4Uniform("view", view);
+//			lightingCubeShader.SetMat4Uniform("projection", projection);
 //
 //			glDrawArrays(GL_TRIANGLES, 0, 36);
 //		}
@@ -446,11 +446,11 @@
 //
 //		//model2 = glm::rotate(model2, 1.0f, glm::vec3(0.0f,1.0f,1.0f));
 //
-//		lightSourceShader.Use();
-//		lightSourceShader.SetMat4("model", model2);
-//		lightSourceShader.SetMat4("view", view);
-//		lightSourceShader.SetMat4("projection", projection);
-//		lightSourceShader.SetVec3("lightSourcePosition", lightCubePosition);
+//		lightSourceShader.Invoke();
+//		lightSourceShader.SetMat4Uniform("model", model2);
+//		lightSourceShader.SetMat4Uniform("view", view);
+//		lightSourceShader.SetMat4Uniform("projection", projection);
+//		lightSourceShader.SetVec3Uniform("lightSourcePosition", lightCubePosition);
 //
 //		//lightSourceShader.SetVec3("")
 //		glDrawArrays(GL_TRIANGLES, 0, 36);

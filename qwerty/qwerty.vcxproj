@@ -154,6 +154,7 @@
     <ClCompile Include="libraries\imgui\imgui_widgets.cpp" />
     <ClCompile Include="libraries\stbimage\stbimage.cpp" />
     <ClCompile Include="src\camera\camera.cpp" />
+    <ClCompile Include="src\eyemovementscene.cpp" />
     <ClCompile Include="src\imgui\imgui.cpp" />
     <ClCompile Include="src\imgui\imgui_demo.cpp" />
     <ClCompile Include="src\imgui\imgui_draw.cpp" />
@@ -163,11 +164,16 @@
     <ClCompile Include="src\imgui\imgui_tables.cpp" />
     <ClCompile Include="src\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\fakemain.cpp" />
+    <ClCompile Include="src\fakepong.cpp" />
     <ClCompile Include="src\lightingscene2.cpp" />
     <ClCompile Include="src\lightingscene3.cpp" />
+    <ClCompile Include="src\lightingscene4.cpp" />
+    <ClCompile Include="src\lightingscene5.cpp" />
+    <ClCompile Include="src\lightningstrikescene.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\maths\qmath.cpp" />
     <ClCompile Include="src\modeloading.cpp" />
+    <ClCompile Include="src\pong.cpp" />
     <ClCompile Include="src\qmathtest.cpp" />
     <ClCompile Include="src\qwerty\qwerty.cpp" />
     <ClCompile Include="src\rendercat.cpp" />
@@ -180,6 +186,12 @@
     <None Include="resources\shaders\Lighting\lightingcubeshader.vert" />
     <None Include="resources\shaders\Lighting\lightsourceshader.frag" />
     <None Include="resources\shaders\Lighting\lightsourceshader.vert" />
+    <None Include="resources\shaders\LightningStrike\lightning.frag" />
+    <None Include="resources\shaders\LightningStrike\lightning.geom" />
+    <None Include="resources\shaders\LightningStrike\lightning.vert" />
+    <None Include="resources\shaders\LightningStrike\lightningstrikefloor.frag" />
+    <None Include="resources\shaders\LightningStrike\lightningstrikefloor.vert" />
+    <None Include="resources\shaders\LightningStrike\testlightninggeometryshader.geom" />
     <None Include="resources\shaders\RotatingCube\RotatingCube.frag" />
     <None Include="resources\shaders\RotatingCube\RotatingCube.vert" />
     <None Include="resources\shaders\Textures\Texture.frag" />
